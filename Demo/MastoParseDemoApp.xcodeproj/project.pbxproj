@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FBC21ABC2E15794900AB3A98 /* MastoParse in Frameworks */ = {isa = PBXBuildFile; productRef = FBC21ABB2E15794900AB3A98 /* MastoParse */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FBB76EAA2E1562BE00480EBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBB76E912E1562BC00480EBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBB76E982E1562BC00480EBA;
+			remoteInfo = MastoParseDemoApp;
+		};
+		FBB76EB42E1562BE00480EBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBB76E912E1562BC00480EBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBB76E982E1562BC00480EBA;
+			remoteInfo = MastoParseDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FBB76E992E1562BC00480EBA /* MastoParseDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MastoParseDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB76EA92E1562BE00480EBA /* MastoParseDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MastoParseDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB76EB32E1562BE00480EBA /* MastoParseDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MastoParseDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FBB76E9B2E1562BC00480EBA /* MastoParseDemoApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MastoParseDemoApp;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBB76E962E1562BC00480EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC21ABC2E15794900AB3A98 /* MastoParse in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB76EA62E1562BE00480EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB76EB02E1562BE00480EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBB76E902E1562BC00480EBA = {
+			isa = PBXGroup;
+			children = (
+				FBB76E9B2E1562BC00480EBA /* MastoParseDemoApp */,
+				FBB76E9A2E1562BC00480EBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBB76E9A2E1562BC00480EBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBB76E992E1562BC00480EBA /* MastoParseDemoApp.app */,
+				FBB76EA92E1562BE00480EBA /* MastoParseDemoAppTests.xctest */,
+				FBB76EB32E1562BE00480EBA /* MastoParseDemoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBB76E982E1562BC00480EBA /* MastoParseDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB76EBD2E1562BE00480EBA /* Build configuration list for PBXNativeTarget "MastoParseDemoApp" */;
+			buildPhases = (
+				FBB76E952E1562BC00480EBA /* Sources */,
+				FBB76E962E1562BC00480EBA /* Frameworks */,
+				FBB76E972E1562BC00480EBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FBB76E9B2E1562BC00480EBA /* MastoParseDemoApp */,
+			);
+			name = MastoParseDemoApp;
+			packageProductDependencies = (
+				FBC21ABB2E15794900AB3A98 /* MastoParse */,
+			);
+			productName = MastoParseDemoApp;
+			productReference = FBB76E992E1562BC00480EBA /* MastoParseDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FBB76EA82E1562BE00480EBA /* MastoParseDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB76EC02E1562BE00480EBA /* Build configuration list for PBXNativeTarget "MastoParseDemoAppTests" */;
+			buildPhases = (
+				FBB76EA52E1562BE00480EBA /* Sources */,
+				FBB76EA62E1562BE00480EBA /* Frameworks */,
+				FBB76EA72E1562BE00480EBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBB76EAB2E1562BE00480EBA /* PBXTargetDependency */,
+			);
+			name = MastoParseDemoAppTests;
+			packageProductDependencies = (
+			);
+			productName = MastoParseDemoAppTests;
+			productReference = FBB76EA92E1562BE00480EBA /* MastoParseDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FBB76EB22E1562BE00480EBA /* MastoParseDemoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB76EC32E1562BE00480EBA /* Build configuration list for PBXNativeTarget "MastoParseDemoAppUITests" */;
+			buildPhases = (
+				FBB76EAF2E1562BE00480EBA /* Sources */,
+				FBB76EB02E1562BE00480EBA /* Frameworks */,
+				FBB76EB12E1562BE00480EBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBB76EB52E1562BE00480EBA /* PBXTargetDependency */,
+			);
+			name = MastoParseDemoAppUITests;
+			packageProductDependencies = (
+			);
+			productName = MastoParseDemoAppUITests;
+			productReference = FBB76EB32E1562BE00480EBA /* MastoParseDemoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBB76E912E1562BC00480EBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					FBB76E982E1562BC00480EBA = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					FBB76EA82E1562BE00480EBA = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = FBB76E982E1562BC00480EBA;
+					};
+					FBB76EB22E1562BE00480EBA = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = FBB76E982E1562BC00480EBA;
+					};
+				};
+			};
+			buildConfigurationList = FBB76E942E1562BC00480EBA /* Build configuration list for PBXProject "MastoParseDemoApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBB76E902E1562BC00480EBA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FBC21ABA2E15794900AB3A98 /* XCLocalSwiftPackageReference "../MastoParse" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FBB76E9A2E1562BC00480EBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBB76E982E1562BC00480EBA /* MastoParseDemoApp */,
+				FBB76EA82E1562BE00480EBA /* MastoParseDemoAppTests */,
+				FBB76EB22E1562BE00480EBA /* MastoParseDemoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBB76E972E1562BC00480EBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB76EA72E1562BE00480EBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB76EB12E1562BE00480EBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBB76E952E1562BC00480EBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB76EA52E1562BE00480EBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB76EAF2E1562BE00480EBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FBB76EAB2E1562BE00480EBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBB76E982E1562BC00480EBA /* MastoParseDemoApp */;
+			targetProxy = FBB76EAA2E1562BE00480EBA /* PBXContainerItemProxy */;
+		};
+		FBB76EB52E1562BE00480EBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBB76E982E1562BC00480EBA /* MastoParseDemoApp */;
+			targetProxy = FBB76EB42E1562BE00480EBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FBB76EBB2E1562BE00480EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FBB76EBC2E1562BE00480EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBB76EBE2E1562BE00480EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MastoParseDemoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8795L94465;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whattherestimefor.MastoParseDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FBB76EBF2E1562BE00480EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MastoParseDemoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8795L94465;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whattherestimefor.MastoParseDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FBB76EC12E1562BE00480EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8795L94465;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whattherestimefor.MastoParseDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MastoParseDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MastoParseDemoApp";
+			};
+			name = Debug;
+		};
+		FBB76EC22E1562BE00480EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8795L94465;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whattherestimefor.MastoParseDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MastoParseDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MastoParseDemoApp";
+			};
+			name = Release;
+		};
+		FBB76EC42E1562BE00480EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8795L94465;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whattherestimefor.MastoParseDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MastoParseDemoApp;
+			};
+			name = Debug;
+		};
+		FBB76EC52E1562BE00480EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8795L94465;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whattherestimefor.MastoParseDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MastoParseDemoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBB76E942E1562BC00480EBA /* Build configuration list for PBXProject "MastoParseDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB76EBB2E1562BE00480EBA /* Debug */,
+				FBB76EBC2E1562BE00480EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB76EBD2E1562BE00480EBA /* Build configuration list for PBXNativeTarget "MastoParseDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB76EBE2E1562BE00480EBA /* Debug */,
+				FBB76EBF2E1562BE00480EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB76EC02E1562BE00480EBA /* Build configuration list for PBXNativeTarget "MastoParseDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB76EC12E1562BE00480EBA /* Debug */,
+				FBB76EC22E1562BE00480EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB76EC32E1562BE00480EBA /* Build configuration list for PBXNativeTarget "MastoParseDemoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB76EC42E1562BE00480EBA /* Debug */,
+				FBB76EC52E1562BE00480EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		FBC21ABA2E15794900AB3A98 /* XCLocalSwiftPackageReference "../MastoParse" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../MastoParse;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBC21ABB2E15794900AB3A98 /* MastoParse */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MastoParse;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FBB76E912E1562BC00480EBA /* Project object */;
+}
