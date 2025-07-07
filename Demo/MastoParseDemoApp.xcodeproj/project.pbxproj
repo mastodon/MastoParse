@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FBC21ABC2E15794900AB3A98 /* MastoParse in Frameworks */ = {isa = PBXBuildFile; productRef = FBC21ABB2E15794900AB3A98 /* MastoParse */; };
+		FBA2EA8D2E1C0833005ADEF0 /* MastoParse in Frameworks */ = {isa = PBXBuildFile; productRef = FBA2EA8C2E1C0833005ADEF0 /* MastoParse */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBC21ABC2E15794900AB3A98 /* MastoParse in Frameworks */,
+				FBA2EA8D2E1C0833005ADEF0 /* MastoParse in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			);
 			name = MastoParseDemoApp;
 			packageProductDependencies = (
-				FBC21ABB2E15794900AB3A98 /* MastoParse */,
+				FBA2EA8C2E1C0833005ADEF0 /* MastoParse */,
 			);
 			productName = MastoParseDemoApp;
 			productReference = FBB76E992E1562BC00480EBA /* MastoParseDemoApp.app */;
@@ -184,7 +184,7 @@
 			mainGroup = FBB76E902E1562BC00480EBA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				FBC21ABA2E15794900AB3A98 /* XCLocalSwiftPackageReference "../MastoParse" */,
+				FBA2EA8B2E1C0833005ADEF0 /* XCLocalSwiftPackageReference "../../MastoParse" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FBB76E9A2E1562BC00480EBA /* Products */;
@@ -551,14 +551,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		FBC21ABA2E15794900AB3A98 /* XCLocalSwiftPackageReference "../MastoParse" */ = {
+		FBA2EA8B2E1C0833005ADEF0 /* XCLocalSwiftPackageReference "../../MastoParse" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../MastoParse;
+			relativePath = ../../MastoParse;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FBC21ABB2E15794900AB3A98 /* MastoParse */ = {
+		FBA2EA8C2E1C0833005ADEF0 /* MastoParse */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MastoParse;
 		};
