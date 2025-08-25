@@ -299,7 +299,9 @@ func toString(_ nodes: [MastoParseNode]) -> String {
     nodes.map { node in
         switch node {
         case .text(let t):
+#if DEBUG && false
             print("toString of text is: \(t)")
+#endif
             return escapeMarkdown(t)
             
         case .element(let element):
