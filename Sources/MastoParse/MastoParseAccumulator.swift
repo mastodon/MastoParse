@@ -324,11 +324,35 @@ func toString(_ nodes: [MastoParseNode]) -> String {
             case "pre", "blockquote": assertionFailure(); return ""
             case "a":
                 let href = element.attributes["href"] ?? "#"
-                return "[\(childrenMarkdown)](\(href))"
+                return "[\(trimUrlStringForDisplay(childrenMarkdown))](\(href))"
             case "br": return "  \n"
             default:
                 return childrenMarkdown
             }
         }
     }.joined()
+}
+
+func trimUrlStringForDisplay(_ urlString: String) -> String {
+    let maxLength: Int = 30
+    var trimmed: String.SubSequence
+    let https = "https://"
+    let http = "http://"
+    let www = "www."
+    
+    if urlString.hasPrefix(https) {
+        trimmed = urlString.dropFirst(https.count)
+    } else if urlString.hasPrefix(http) {
+        trimmed = urlString.dropFirst(http.count)
+    } else {
+        return urlString
+    }
+    if trimmed.hasPrefix(www) {
+        trimmed = trimmed.dropFirst(www.count)
+    }
+    if trimmed.count > maxLength {
+        return String(trimmed.prefix(maxLength)) + "…"
+    } else {
+        return String(trimmed)
+    }
 }
