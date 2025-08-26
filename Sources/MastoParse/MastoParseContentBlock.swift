@@ -16,7 +16,7 @@ func getParseBlocks(from nodes: [MastoParseNode]) -> [MastoParseContentBlock] {
         if let block = accumulator.contentBlock() {
             return [block]
         } else {
-            return accumulator.contentRows(inheritingNestedFormatting: [])
+            return accumulator.contentRows(inheritingNestedFormatting: [], withPrefix: nil)
         }
     }
     
@@ -39,11 +39,13 @@ public class MastoParseContentRow: MastoParseContentBlock {
     }
 
     public let style: Style
+    public let listItemPrefix: String?
     public let nestedFormatting: [MastoParseNestedFormat]
     public let contents: [MastoParseInlineElement]
     
-    public init(contents: [MastoParseInlineElement], style: Style, nestedFormatting: [MastoParseNestedFormat]) {
+    public init(contents: [MastoParseInlineElement], style: Style, listItemPrefix: String?, nestedFormatting: [MastoParseNestedFormat]) {
         self.style = style
+        self.listItemPrefix = listItemPrefix
         self.contents = contents
         self.nestedFormatting = nestedFormatting
     }

@@ -16,11 +16,15 @@ public class MarkdownAccumulator {
         fatalError("subclasses must implement")
     }
     
+    var canAppendBlocks: Bool {
+        return false
+    }
+    
     func appendBlock(_ block: MarkdownAccumulator) -> Bool {
         fatalError("subclasses must implement")
     }
     
-    func contentRows(inheritingNestedFormatting inherited: [MastoParseNestedFormat]) -> [MastoParseContentRow] {
+    func contentRows(inheritingNestedFormatting inherited: [MastoParseNestedFormat], withPrefix prefix: String?) -> [MastoParseContentRow] {
         fatalError("subclasses must implement")
     }
     
@@ -59,15 +63,15 @@ private class MarkdownFlowAccumulator: MarkdownAccumulator {
         return false
     }
     
-    override func contentRows(inheritingNestedFormatting inherited: [MastoParseNestedFormat]) -> [MastoParseContentRow] {
+    override func contentRows(inheritingNestedFormatting inherited: [MastoParseNestedFormat], withPrefix prefix: String?) -> [MastoParseContentRow] {
         switch type {
         case .paragraph:
             if !inlineElements.isEmpty {
-                return [MastoParseContentRow(contents: inlineElements, style: .paragraph, nestedFormatting: inherited)]
+                return [MastoParseContentRow(contents: inlineElements, style: .paragraph, listItemPrefix: prefix, nestedFormatting: inherited)]
             }
         case .code:
             if !inlineElements.isEmpty {
-                return [MastoParseContentRow(contents: inlineElements, style: .code, nestedFormatting: inherited)]
+                return [MastoParseContentRow(contents: inlineElements, style: .code, listItemPrefix: prefix, nestedFormatting: inherited)]
             }
         }
         return []
@@ -79,9 +83,18 @@ private class MarkdownFlowAccumulator: MarkdownAccumulator {
 }
 
 class MarkdownBlockAccumulator: MarkdownAccumulator {
-    enum BlockType {
+    enum BlockType: Equatable {
         case blockquote
-        case list
+        case list(prefix: String?)
+        
+        var prefix: String? {
+            switch self {
+            case .blockquote:
+                return nil
+            case .list(let prefix):
+                return prefix
+            }
+        }
     }
     
     let type: BlockType
@@ -110,12 +123,16 @@ class MarkdownBlockAccumulator: MarkdownAccumulator {
         }
     }
     
+    override var canAppendBlocks: Bool {
+        return true
+    }
+    
     override func appendBlock(_ block: MarkdownAccumulator) -> Bool {
         contents.append(block)
         return true
     }
     
-    override func contentRows(inheritingNestedFormatting inherited: [MastoParseNestedFormat]) -> [MastoParseContentRow] {
+    override func contentRows(inheritingNestedFormatting inherited: [MastoParseNestedFormat], withPrefix prefix: String?) -> [MastoParseContentRow] {
         let immutableContents = contents.flatMap { accumulator in
             let childFormatting: [MastoParseNestedFormat] = {
                 switch type {
@@ -133,13 +150,13 @@ class MarkdownBlockAccumulator: MarkdownAccumulator {
                     }
                 }
             }()
-            return accumulator.contentRows(inheritingNestedFormatting: childFormatting)
+            return accumulator.contentRows(inheritingNestedFormatting: childFormatting, withPrefix: type.prefix)
         }
         return immutableContents
     }
     
     override func contentBlock() -> MastoParseContentBlock? {
-        let contents = contentRows(inheritingNestedFormatting: [])
+        let contents = contentRows(inheritingNestedFormatting: [], withPrefix: nil)
         guard !contents.isEmpty else {
             return nil
         }
@@ -162,8 +179,8 @@ private func listItems(_ nodes: [MastoParseNode], ordered: Bool, startingIndex: 
     
     let accumulatedItems: [MarkdownAccumulator] = listItemContents.map { contents in
         defer { index += 1 }
-        let listItem = MarkdownBlockAccumulator(.list)
-        listItem.appendInlineElement(MastoParseInlineElement(type: .text, contents: ordered ? "\(index). " : "• "))
+        let listPrefix = ordered ? "\(index). " : "• "
+        let listItem = MarkdownBlockAccumulator(.list(prefix: listPrefix))
         
         _ = toMastoParseAccumulators(contents, addingTo: listItem)
         
@@ -231,14 +248,19 @@ func toMastoParseAccumulators(_ nodes: [MastoParseNode], addingTo containingAccu
                         } else {
                             startIndex = 1
                         }
-                        let list = MarkdownBlockAccumulator(.list)
-                        let items = listItems(element.children, ordered: element.name == "ol", startingIndex: element.name == "ol" ? startIndex : nil)
-                        for item in items {
-                            _ = list.appendBlock(item)
-                        }
-                        if !currentAccumulator.appendBlock(list) {
+                        
+                        let itemAccumulators = listItems(element.children, ordered: element.name == "ol", startingIndex: element.name == "ol" ? startIndex : nil)
+                        
+                        let appendToCurrent = currentAccumulator.canAppendBlocks
+                        if !appendToCurrent {
                             accumulatedBlocks.append(currentAccumulator)
-                            accumulatedBlocks.append(list)
+                        }
+                        for itemAccumulator in itemAccumulators {
+                            if appendToCurrent {
+                                _ = currentAccumulator.appendBlock(itemAccumulator)
+                            } else {
+                                accumulatedBlocks.append(itemAccumulator)
+                            }
                         }
                         skipChildren = true
                         currentAccumulator = MarkdownFlowAccumulator(.paragraph) // we've taken care of the whole list already, now we wipe the slate clean for a fresh start
