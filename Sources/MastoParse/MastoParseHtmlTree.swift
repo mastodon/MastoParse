@@ -39,7 +39,6 @@ struct ElementNode {
 private func transform(node: SwiftSoup.Node) throws -> MastoParseNode? {
     switch node {
     case let textNode as SwiftSoup.TextNode:
-        // Collapse any extra carriage returns
         let text = textNode.getWholeText()
         return text.isEmpty ? nil : .text(text)
         
