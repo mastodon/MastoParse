@@ -335,24 +335,19 @@ func toString(_ nodes: [MastoParseNode]) -> String {
 
 func trimUrlStringForDisplay(_ urlString: String) -> String {
     let maxLength: Int = 30
-    var trimmed: String.SubSequence
+    var trimmed = urlString
     let https = "https://"
     let http = "http://"
+    let escapedWww = "www\\."
     let www = "www."
     
-    if urlString.hasPrefix(https) {
-        trimmed = urlString.dropFirst(https.count)
-    } else if urlString.hasPrefix(http) {
-        trimmed = urlString.dropFirst(http.count)
-    } else {
-        return urlString
-    }
-    if trimmed.hasPrefix(www) {
-        trimmed = trimmed.dropFirst(www.count)
-    }
+    trimmed = trimmed.replacingOccurrences(of: https, with: "", options: .anchored)
+    trimmed = trimmed.replacingOccurrences(of: http, with: "", options: .anchored)
+    trimmed = trimmed.replacingOccurrences(of: escapedWww, with: "", options: .anchored)
+    trimmed = trimmed.replacingOccurrences(of: www, with: "", options: .anchored)
     if trimmed.count > maxLength {
         return String(trimmed.prefix(maxLength)) + "…"
     } else {
-        return String(trimmed)
+        return trimmed
     }
 }
