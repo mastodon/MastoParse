@@ -181,7 +181,6 @@ func toMastoParseAccumulators(_ nodes: [MastoParseNode], addingTo containingAccu
     
     for node in nodes {
         func append(_ inlineElement: MastoParseInlineElement.ElementType, contents: String) {
-            guard !contents.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
             let trimmed = {
                 if let charactersToTrim = currentAccumulator.charactersToTrim {
                     contents.trimmingCharacters(in: charactersToTrim)
