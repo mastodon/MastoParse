@@ -59,8 +59,8 @@ public class MastoParseBlockquote: MastoParseContentBlock {
     }
 }
 
-public struct MastoParseInlineElement: Sendable {
-    public enum ElementType: Sendable {
+public struct MastoParseInlineElement: Sendable, Equatable {
+    public enum ElementType: Sendable, Equatable {
         case text
         case code
     }
